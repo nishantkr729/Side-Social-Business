@@ -1,6 +1,5 @@
 openapi: 3.1.0
 info:
-  # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
   description: API specification
@@ -10,6 +9,10 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: stats
+    description: Impact statistics
+  - name: case-studies
+    description: Case study work items
 paths:
   /healthz:
     get:
@@ -24,6 +27,34 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /stats:
+    get:
+      operationId: getStats
+      tags: [stats]
+      summary: Get all impact stats
+      responses:
+        "200":
+          description: List of impact stats
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Stat"
+  /case-studies:
+    get:
+      operationId: getCaseStudies
+      tags: [case-studies]
+      summary: Get all case studies
+      responses:
+        "200":
+          description: List of case studies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CaseStudy"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +64,35 @@ components:
           type: string
       required:
         - status
-
+    Stat:
+      type: object
+      properties:
+        id:
+          type: integer
+        number:
+          type: string
+        label:
+          type: string
+        sub:
+          type: string
+        sortOrder:
+          type: integer
+      required: [id, number, label, sub, sortOrder]
+    CaseStudy:
+      type: object
+      properties:
+        id:
+          type: integer
+        tag:
+          type: string
+        color:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        outcome:
+          type: string
+        sortOrder:
+          type: integer
+      required: [id, tag, color, title, description, outcome, sortOrder]

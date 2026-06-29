@@ -5,17 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
-
-export interface Stat {
-  id: number;
-  number: string;
-  label: string;
-  sub: string;
-  sortOrder: number;
-}
 
 export interface CaseStudy {
   id: number;
@@ -26,4 +15,3 @@ export interface CaseStudy {
   outcome: string;
   sortOrder: number;
 }
-

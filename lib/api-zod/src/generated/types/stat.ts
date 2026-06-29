@@ -6,6 +6,10 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export * from './caseStudy';
-export * from './healthStatus';
-export * from './stat';
+export interface Stat {
+  id: number;
+  number: string;
+  label: string;
+  sub: string;
+  sortOrder: number;
+}
