@@ -6,3 +6,9 @@ id = "QutH_DtUtbFxkhkMgeSoV"
 uri = "file://omnis-codebase.md"
 type = "text"
 title = "Omnis — Full Codebase Documentation"
+
+[[outputs]]
+id = "UxtgRwmX5uUCl8THseHsO"
+uri = "file://omnis-codebase.pdf"
+type = "pdf"
+title = "Omnis — Full Codebase Documentation (PDF)"
