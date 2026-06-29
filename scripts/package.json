@@ -4,15 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "hello": "tsx ./src/hello.ts",
-    "md-to-pdf": "tsx ./src/md-to-pdf.ts",
-    "seed": "tsx ./src/seed.ts",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "hello": "node ./src/hello.js",
+    "md-to-pdf": "node ./src/md-to-pdf.js",
+    "seed": "node ./src/seed.js"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "@types/pdfkit": "^0.13.9",
-    "tsx": "catalog:"
+    "@types/node": "catalog:"
   },
   "dependencies": {
     "@workspace/db": "workspace:*",
