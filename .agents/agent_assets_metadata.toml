@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "QutH_DtUtbFxkhkMgeSoV"
+uri = "file://omnis-codebase.md"
+type = "text"
+title = "Omnis — Full Codebase Documentation"
